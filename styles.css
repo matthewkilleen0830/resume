@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #222;
+    color: white;
+}
+
+header a {
+    color: #4ea3ff;
+    text-decoration: none;
+}
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.job {
+    margin-bottom: 30px;
+}
+
+.role {
+    font-weight: bold;
+    color: #555;
+}
+
+.project {
+    margin-bottom: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+}
