@@ -66,6 +66,16 @@ ul {
     margin-bottom: 25px;
 }
 
+.project a {
+    color: #2a6ebb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
     padding: 20px;
