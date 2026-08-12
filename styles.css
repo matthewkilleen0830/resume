@@ -53,7 +53,7 @@ ul {
 }
 
 .job {
-    margin-bottom: 22px;
+    margin-bottom: 10px;
 }
 
 .job h3 {
@@ -76,7 +76,7 @@ ul {
 
 .job ul li {
     margin-bottom: 6px;
-    line-height: 1.45;
+    line-height: 1.65;
 }
 
 .project {
