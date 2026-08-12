@@ -63,7 +63,7 @@ ul {
 }
 
 .role {
-    margin: 0 0 8px 0;
+    margin: 0 0 12px 0;
     font-weight: 500;
     font-size: 1.02rem;
     color: #555;
@@ -75,7 +75,7 @@ ul {
 }
 
 .job ul li {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     line-height: 1.35;
 }
 
