@@ -63,14 +63,13 @@ ul {
 }
 
 .role {
-    margin: 1px 0 12px 0;
+    margin: 1px 0 8px 0;
     font-weight: 500;
     font-size: 1.02rem;
     color: #555;
 }
 
 .job ul {
-    margin-top: 2px;
     margin: 0;
     padding-left: 20px;
 }
