@@ -70,6 +70,7 @@ ul {
 }
 
 .job ul {
+    margin-top: 2px;
     margin: 0;
     padding-left: 20px;
 }
