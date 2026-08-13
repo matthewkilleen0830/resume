@@ -96,6 +96,10 @@ ul {
     text-decoration: underline;
 }
 
+.project p {
+    margin-top: 2px;
+}
+
 .project a {
     color: #2a6ebb;
     text-decoration: none;
