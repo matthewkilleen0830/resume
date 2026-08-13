@@ -13,9 +13,9 @@
     box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 601px) {
     .top-banner img {
-        padding: 0 30px;
+        padding: 0;
     }
 }
 
