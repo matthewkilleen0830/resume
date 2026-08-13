@@ -19,6 +19,14 @@ header .contact {
     color: #555;
 }
 
+header h1 {
+    font-family: Garamond, Georgia, "Times New Roman", serif;
+    font-size: 2.4rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
 header a {
     color: #2a6ebb;
     text-decoration: none;
