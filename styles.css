@@ -1,7 +1,3 @@
-/* ===========================
-   Top Banner
-=========================== */
-
 .top-banner {
     text-align: center;
     padding: 20px 0;
@@ -23,9 +19,7 @@
     }
 }
 
-/* ===========================
-   Global Styles
-=========================== */
+
 
 body {
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
@@ -65,22 +59,20 @@ ul li {
     margin-bottom: 6px;
 }
 
-/* ===========================
-   Job Blocks
-=========================== */
+
 
 .job {
     margin-bottom: 28px;
 }
 
 .job h3 {
-    margin: 0 0 2px 0;
+    margin: 0 0 1px 0;
     font-size: 1.15rem;
     font-weight: 600;
 }
 
 .role {
-    margin: 0 0 12px 0;
+    margin: 0 0 9px 0;
     font-weight: 500;
     font-size: 1.02rem;
     color: #555;
@@ -96,9 +88,7 @@ ul li {
     line-height: 1.15;
 }
 
-/* ===========================
-   Projects
-=========================== */
+
 
 .project {
     margin-bottom: 25px;
@@ -112,9 +102,7 @@ ul li {
     margin-top: 0;
 }
 
-/* ===========================
-   Links
-=========================== */
+
 
 a {
     color: #2a6ebb;
@@ -126,9 +114,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===========================
-   Footer
-=========================== */
+
 
 footer {
     text-align: center;
