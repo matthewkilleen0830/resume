@@ -117,18 +117,20 @@ a:hover {
 
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
     text-align: center;
     padding: 20px;
     background: transparent;
     color: #777;
     margin-top: 40px;
     font-family: Georgia, 'Times New Roman', serif;
-    display: flex;
-    align-items: center;
-    gap: 6px;
 }
 
 .tiny-icon {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
 }
