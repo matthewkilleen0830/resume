@@ -117,7 +117,7 @@ a:hover {
 
 
 footer {
-    text-align: left;
+    text-align: center;
     padding: 20px;
     background: transparent;
     color: #777;
@@ -129,6 +129,6 @@ footer {
 }
 
 .tiny-icon {
-    width: 14px;
-    height: 14px;
+    width: 28px;
+    height: 28px;
 }
