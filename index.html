@@ -1,862 +1,222 @@
-<!-- DocType declaration -->
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Define header and page title -->
 <head>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
-  <meta charset="UTF-8">
-  <meta name="color-scheme" content="dark">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <title>Road to the CFP: Broadcast Dashboard</title>
-  <!-- Bootstrap Stylesheets -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Killeen — Resume</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- Application Layout -->
-  <div class="container-fluid px-4 py-3 main-wrapper">
+<header class="top-banner">
+    <!-- Header Image with Clickable Map -->
+    <img src="header.png" usemap="#image-map" alt="Header banner for Matthew Killeen">
 
-<!-- Header Banner Image -->
-    <header class="top-banner">
-      <img src="headerBanner.png" alt="Header Banner for Dashboard">
-    </header>
+    <map name="image-map">
+        <area 
+            alt="Email Matthew Killeen" 
+            title="Email Matthew Killeen" 
+            href="mailto:matthew.killeen0830@gmail.com" 
+            coords="909,746,426,655" 
+            shape="rect">
 
-    <div class="row g-3 flex-grow-1">
+        <area 
+            alt="LinkedIn Profile" 
+            title="LinkedIn Profile" 
+            href="https://linkedin.com/in/matthewkilleen218" 
+            coords="923,655,1420,746" 
+            shape="rect">
 
-      <!-- Slicer Selection Controls Section -->
-      <div class="col-md-2 align-self-start">
-        <div class="filter-panel">
-          <h5 class="mb-3">Week 2 Selections</h5>
+        <area 
+            alt="GitHub Profile" 
+            title="GitHub Profile" 
+            href="https://github.com/matthewkilleen0830" 
+            coords="1431,655,1914,746" 
+            shape="rect">
+    </map>
+</header>
 
-          <!-- Single-Select Date Slicer -->
-          <div class="mb-3">
-            <label for="dateFilter" class="form-label fw-semibold">Day/Date</label>
-            <select id="dateFilter" class="form-select"></select>
-          </div>
+<section>
+    <h2>Professional Summary</h2>
+    <p>
+        Dynamic and analytical finance professional with progressive experience driving data-driven decision-making within top financial institutions. 
+        Proven track record in automating complex processes, developing scalable reporting tools, analyzing large financial datasets, and delivering insights 
+        that improve operational efficiency and compliance. Bachelor of Arts in Economics with specialized academic training in Data Analytics and Visualization. 
+        A critically thinking problem solver with a passion for organizing and presenting data to provide objective, analytical solutions.
+    </p>
+</section>
 
-          <!-- Single-Select Kickoff Time Filter (Adaptive to Date) -->
-          <div class="mb-3">
-            <label for="timeFilter" class="form-label fw-semibold">Kickoff Time</label>
-            <select id="timeFilter" class="form-select"></select>
-          </div>
+<section>
+    <h2>Areas of Expertise</h2>
+    <ul class="expertise">
+        <li>Financial Analysis</li>
+        <li>Financial Modeling</li>
+        <li>FP&A</li>
+        <li>Cost Allocation</li>
+        <li>Data Analysis</li>
+        <li>Cross-Functional Collaboration</li>
+        <li>Stakeholder Management</li>
+        <li>Strategic Leadership</li>
+        <li>Financial Reporting</li>
+        <li>Business Process Improvement</li>
+    </ul>
+</section>
 
-          <!-- Single-Select Ranked Matchup Filter (Adaptive to Date + Time) -->
-          <div class="mb-3">
-            <label for="rankedFilter" class="form-label fw-semibold">Ranked Teams</label>
-            <select id="rankedFilter" class="form-select"></select>
-          </div>
+<section>
+    <h2>Technical Skills</h2>
+    <ul>
+        <li>Languages: HTML/CSS, JavaScript, Python, SQL, VBA</li>
+        <li>Databases: Essbase, MongoDB, PostgreSQL, SQLite, MS SQL Server, Teradata</li>
+        <li>Tools: Advanced Excel, Git/GitHub, Jupyter Notebook, VS Code, Tableau, Power BI</li>
+    </ul>
+</section>
 
-          <!-- Multi-Select Checkbox Conference Slicer (Adaptive to Date + Time + Ranked) -->
-          <div class="mb-3">
-            <label class="form-label fw-semibold">Conference</label>
-            <div id="conferenceFilter" class="checkbox-panel">
-              <!-- Checkboxes dynamically rendered via JavaScript -->
-            </div>
-          </div>
+<section class="experience">
+    <h2>Professional Experience</h2>
 
-          <!-- Multi-Select Checkbox Network Slicer (Adaptive to Date + Time + Ranked + Conference) -->
-          <div class="mb-3">
-            <label class="form-label fw-semibold">Media Provider</label>
-            <div id="networkFilter" class="checkbox-panel">
-              <!-- Checkboxes dynamically rendered via JavaScript -->
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Main Dashboard Visualization Display -->
-<div class="col-md-10 charts-column">
-  
-  <!-- Primary Networks Chart Container -->
-  <div class="chart-container top-chart" id="networkChartContainer">
-    <h5 class="mb-2 chart-title">College Football Viewing Guide (all times Central Time)</h5>
-    <div id="barChart" class="plotly-chart"></div>
-  </div>
-
-  <!-- Streaming Networks Chart Container -->
-  <div class="chart-container bottom-chart" id="digitalChartContainer">
-    <h5 class="mb-2 chart-title">Streaming Providers (all times Central Time)</h5>
-    <div id="digitalChart" class="plotly-chart"></div>
-  </div>
-
-</div>
-
+    <div class="job">
+        <h3>Wells Fargo — Minneapolis, Minnesota</h3>
+        <p class="role">AVP, Finance Analyst (2022–2025)<br>
+        <i>Served as a finance analytics consultant, managing data automation and financial modeling solutions in support of multiple Lines of Business and Legal Entities.</i></p>
+        <ul>
+            <li>Developed an automated VBA-driven Excel and Essbase solution that consolidated 1M+ financial metrics to enhance monthly allocation reporting, streamline spend/recovery analysis, and provided 100+ finance leaders with high-quality, risk-focused reconciled insights across all LOBs and Legal Entities.</li>
+            <li>Performed advanced financial modeling to evaluate and forecast expenses, delivering data‑driven recommendations that improved the efficiency and accuracy of cost allocation.</li>
+            <li>Partnered with cross‑functional teams to turn complex data into clear insights, improving transparency and strengthening management reporting.</li>
+        </ul>
     </div>
-  </div>
 
-  <!-- Enable D3.js and Plotly Dependencies -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-4.0.0.min.js"></script>
-
-  <!-- Dashboard Controller Script -->
-  <script>
-    // =========================================================================
-    // GLOBAL CONSTANTS & CONFIGURATION
-    // =========================================================================
-
-    // List of networks classified as purely digital/streaming
-    const DIGITAL_NETWORKS = ["ACCNX", "Peacock", "ESPN+", "MW+", "SECN+"];
-
-    // Preferred Conference Display Priority
-    const PREFERRED_CONF_ORDER = [
-      "ACC",
-      "Big Ten",
-      "Big XII",
-      "SEC",
-      "AAC",
-      "Conference USA",
-      "MAC",
-      "Mountain West",
-      "Pac-12",
-      "Sun Belt"
-    ];
-
-    // Shared X-Axis Time Config (Minutes from Midnight) for Vertical Alignment Across Charts
-    const SHARED_X_AXIS_VALS = [660, 720, 780, 840, 900, 960, 1020, 1080, 1140, 1200, 1260, 1320, 1380, 1440];
-    const SHARED_X_AXIS_TEXT = [
-      '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', 
-      '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM', '9:00 PM', '10:00 PM', '11:00 PM', '12:00 AM'
-    ];
-
-    // Lookup Table mapping Home Teams to Primary Brand Colors
-    const TEAM_COLORS = {
-      // Big Ten
-      "Illinois": "#E84A27", "Indiana": "#990000", "Iowa": "#000000", "Maryland": "#E21A23",
-      "Michigan": "#00274C", "Michigan State": "#18453B", "Minnesota": "#7A0019", "Nebraska": "#E31837",
-      "Northwestern": "#4E2A84", "Ohio State": "#BB0000", "Oregon": "#007030", "Penn State": "#041E42",
-      "Purdue": "#000000", "Rutgers": "#CC0033", "UCLA": "#2D68C4", "USC": "#990000",
-      "Washington": "#4B2E83", "Wisconsin": "#C5050C",
-
-      // SEC
-      "Alabama": "#9E1B32", "Arkansas": "#9D2235", "Auburn": "#0C2340", "Florida": "#0021A5",
-      "Georgia": "#BA0C2F", "Kentucky": "#0033A0", "LSU": "#461D7C", "Mississippi State": "#660000",
-      "Missouri": "#000000", "Oklahoma": "#841617", "Ole Miss": "#14213D", "South Carolina": "#73000A",
-      "Tennessee": "#FF8200", "Texas A&M": "#500000", "Texas": "#BF5700", "Vanderbilt": "#866D4B",
-
-      // ACC
-      "Boston College": "#98002E", "Cal": "#002676", "Clemson": "#F56600", "Duke": "#003087",
-      "Florida State": "#782F40", "Georgia Tech": "#B3A369", "Louisville": "#AD0000", "Miami": "#F47321",
-      "North Carolina": "#7BAFD4", "NC State": "#CC0000", "Pitt": "#003594", "SMU": "#0033A0",
-      "Stanford": "#8C1515", "Syracuse": "#D44500", "Virginia": "#232D4B", "Virginia Tech": "#630031",
-      "Wake Forest": "#9E7E38",
-
-      // Big 12
-      "Arizona": "#CC0003", "Arizona State": "#8C1D40", "Baylor": "#154734", "BYU": "#0062B8",
-      "Cincinnati": "#000000", "Colorado": "#CFB87C", "Houston": "#C8102E", "Iowa State": "#C8102E",
-      "Kansas": "#0051BA", "Kansas State": "#512888", "Oklahoma State": "#FE5C00", "TCU": "#4D1979",
-      "Texas Tech": "#CC0000", "UCF": "#BA9B37", "Utah": "#CC0000", "West Virginia": "#002855",
-
-      // MAC
-      "Akron": "#041E42", "Ball State": "#BA0C2F", "Bowling Green": "#4F2C1D", "Buffalo": "#005BBB",
-      "Central Michigan": "#6A0032", "Eastern Michigan": "#006633", "Kent State": "#002664",
-      "Miami (Ohio)": "#C8102E", "Ohio": "#00694E", "Sacramento State": "#043927", "Toledo": "#15397F",
-      "UMass": "#881C1C", "Western Michigan": "#532E1F",
-
-      // Mountain West
-      "Air Force": "#003087", "Hawai'i": "#024731", "Nevada": "#003366", "New Mexico": "#BA0C2F",
-      "North Dakota State": "#00583D", "Northern Illinois": "#C8102E", "San Jose State": "#0055A2",
-      "UNLV": "#E31837", "UTEP": "#FF8200", "Wyoming": "#492F24",
-
-      // Pac-12
-      "Boise State": "#0033A0", "Colorado State": "#1E4D2B", "Fresno State": "#C41230", "Oregon State": "#D73F09",
-      "San Diego State": "#000000", "Texas State": "#501214", "Utah State": "#00263A", "Washington State": "#981E32",
-
-      // AAC
-      "Army": "#000000", "Charlotte": "#00502F", "East Carolina": "#582C83", "Florida Atlantic": "#003366",
-      "Memphis": "#003087", "Navy": "#0C2340", "North Texas": "#00853E", "Rice": "#00205B",
-      "South Florida": "#006747", "Temple": "#9D2235", "Tulane": "#006747", "Tulsa": "#002D62",
-      "UAB": "#215732", "UTSA": "#0C2340",
-
-      // Conference USA
-      "Delaware": "#00539B", "Florida International": "#001A36", "Jacksonville State": "#CC0000",
-      "Kennesaw State": "#FFC629", "Liberty": "#0A2342", "Middle Tennessee": "#0066CC",
-      "Missouri State": "#5E0009", "New Mexico State": "#891216", "Sam Houston": "#F47920",
-      "Western Kentucky": "#BD0F26",
-
-      // Sun Belt
-      "Appalachian State": "#222222", "Coastal Carolina": "#006F71", "Georgia Southern": "#00152B",
-      "Georgia State": "#0039A6", "James Madison": "#450084", "Marshall": "#00B359",
-      "Old Dominion": "#003057", "Arkansas State": "#CC0000", "Louisiana": "#CE181E",
-      "Louisiana Tech": "#003087", "UL Monroe": "#531B2B", "South Alabama": "#00205B",
-      "Southern Miss": "#FFC72C", "Troy": "#AE1127",
-
-      // Missouri Valley
-      "Illinois State": "#CE1126", "Indiana State": "#00437A", "Murray State": "#002147",
-      "North Dakota": "#008244", "UNI": "#4B116F", "South Dakota": "#AD0000",
-      "South Dakota State": "#0033A0", "Southern Illinois": "#720000", "Youngstown State": "#E4002B",
-
-      // Pioneer League
-      "Butler": "#002D62", "Davidson": "#AC1A2F", "Dayton": "#E4002B", "Drake": "#003087",
-      "Marist": "#C8102E", "Morehead State": "#002F6C", "Presbyterian": "#002F6C", "San Diego": "#007A33",
-      "St. Thomas (MN)": "#51267B", "Stetson": "#005A36", "Valparaiso": "#613312",
-
-      // UAC
-      "Abilene Christian": "#4C2A85", "Austin Peay": "#C41230", "Central Arkansas": "#4F2683",
-      "Eastern Kentucky": "#4C151B", "North Alabama": "#9E1B32", "Tarleton State": "#4F2683",
-      "West Florida": "#007A87", "West Georgia": "#002F6C",
-
-      // Ohio Valley
-      "Charleston Southern": "#00205B", "Eastern Illinois": "#003594", "Gardner-Webb": "#CC0000",
-      "Lindenwood": "#B5A36A", "SE Missouri State": "#CE1126", "Tennessee State": "#002147",
-      "UT Martin": "#002A54", "Western Illinois": "#663399",
-
-      // Patriot League
-      "Bucknell": "#003865", "Colgate": "#822433", "Fordham": "#860038", "Georgetown": "#041E42",
-      "Holy Cross": "#602D89", "Lafayette": "#9E1B32", "Lehigh": "#653815", "Richmond": "#8A1538",
-      "Villanova": "#00205B", "William & Mary": "#115740",
-
-      // MEAC
-      "Delaware State": "#CC0000", "Howard": "#002147", "Morgan State": "#FF6600",
-      "Norfolk State": "#007A3d", "North Carolina Central": "#841F2B", "South Carolina State": "#800000",
-
-      // Big Sky
-      "Cal Poly": "#003831", "Eastern Washington": "#A10022", "Idaho": "#B3A369", "Idaho State": "#F47920",
-      "Montana": "#660000", "Montana State": "#00205B", "Northern Arizona": "#002447",
-      "Northern Colorado": "#002A54", "Portland State": "#154734", "Southern Utah": "#DB0000",
-      "UC Davis": "#002855", "Utah Tech": "#BA1C21", "Weber State": "#4B2682",
-
-      // Southern
-      "Chattanooga": "#003865", "East Tennessee State": "#002855", "Furman": "#4D1979", "Mercer": "#F26522",
-      "Samford": "#CC0000", "Tennessee Tech": "#4B2E83", "The Citadel": "#3A75C4", "VMI": "#E4002B",
-      "Western Carolina": "#51267B", "Wofford": "#B3A369",
-
-      // Southland
-      "East Texas A&M": "#002F6C", "Houston Christian": "#002F6C", "Lamar": "#D11919", "McNeese": "#004B87",
-      "Nicholls": "#C41230", "Northwestern State": "#F15A22", "SE Louisiana": "#244A31",
-      "Stephen F. Austin": "#330066", "UIW": "#C41230", "UT Rio Grand Valley": "#F05A28",
-
-      // Independent & Other
-      "Notre Dame": "#0C2340", "Jackson State": "#002147", "Prairie View A&M": "#330066", "UConn": "#000E2F"
-    };
-
-    // Cached DOM Reference Element map for performance optimization
-    const DOM = {
-      dateFilter: document.getElementById("dateFilter"),
-      timeFilter: document.getElementById("timeFilter"),
-      rankedFilter: document.getElementById("rankedFilter"),
-      conferenceFilter: document.getElementById("conferenceFilter"),
-      networkFilter: document.getElementById("networkFilter")
-    };
-
-    // =========================================================================
-    // DATA INITIALIZATION & EVENT LISTENERS
-    // =========================================================================
-
-    // Loads CSV data, strips any UTF-8 BOM characters from column headers, and assigns the clean dataset to window.gameData
-    d3.csv("02_weekFull.csv", raw => {
-      // Clean Byte Order Mark (BOM) artifact from CSV headers if present
-      const clean = {};
-      Object.keys(raw).forEach(key => {
-        const normalizedKey = key.replace(/^\uFEFF/, "");
-        clean[normalizedKey] = raw[key];
-      });
-      return clean;
-    }).then(data => {
-      window.gameData = data;
-
-      // Initialize Day/Date Slicer Options
-      const initialDate = getFirstAvailableDate(window.gameData);
-      updateDateSlicer(window.gameData, initialDate);
-
-      // Perform initial adaptive cascading setup and render
-      updateCascadingFilters();
-      applyFilters();
-
-      // Set up hierarchical cascading event listeners
-      DOM.dateFilter.addEventListener("change", () => {
-        updateCascadingFilters(1);
-        applyFilters();
-      });
-
-      DOM.timeFilter.addEventListener("change", () => {
-        updateCascadingFilters(2); // Cascade down from Kickoff Time
-        applyFilters();
-      });
-
-      DOM.rankedFilter.addEventListener("change", () => {
-        updateCascadingFilters(3); // Cascade down from Ranked Teams
-        applyFilters();
-      });
-    });
-
-    // =========================================================================
-    // CASCADING SLICER ARCHITECTURE
-    // =========================================================================
-
-    // Extract and sort distinct dates chronologically
-    function getFirstAvailableDate(allData) {
-      const uniqueDates = Array.from(new Set(allData.map(d => d.Date)))
-        .filter(Boolean)
-        .sort((a, b) => new Date(a) - new Date(b));
-      return uniqueDates[0] || null;
-    }
-
-    // Populate the primary Date selection dropdown
-    function updateDateSlicer(allData, selectedDate) {
-      const uniqueDates = Array.from(new Set(allData.map(d => d.Date)))
-        .filter(Boolean)
-        .sort((a, b) => new Date(a) - new Date(b));
-
-      DOM.dateFilter.innerHTML = "";
-      uniqueDates.forEach(date => {
-        const opt = document.createElement("option");
-        opt.value = date;
-        opt.textContent = date;
-        DOM.dateFilter.appendChild(opt);
-      });
-
-      if (selectedDate && uniqueDates.includes(selectedDate)) {
-        DOM.dateFilter.value = selectedDate;
-      } else if (uniqueDates.length > 0) {
-        DOM.dateFilter.value = uniqueDates[0];
-      }
-    }
-
-    // Manage top-down hierarchical cascading option dependencies
-    // Order: Date (1) -> Time (2) -> Ranked (3) -> Conference (4) -> Media Provider (5)
-    // @param {number} startLevel - Specifies level where modification was triggered
-    function updateCascadingFilters(startLevel = 1) {
-      const selectedDate = DOM.dateFilter.value;
-      
-      // Filter base data by Day/Date
-      let subset = window.gameData.filter(d => d.Date === selectedDate);
-
-      // Update Kickoff Time Slicer (adaptive to Date selection)
-      if (startLevel <= 1) {
-        const currentTime = DOM.timeFilter.value;
-        updateTimeSlicer(subset, currentTime);
-      }
-      
-      // Filter subset by selected Kickoff Time
-      const selectedTime = DOM.timeFilter.value;
-      if (selectedTime && selectedTime !== "All") {
-        subset = subset.filter(d => d.Start_Time === selectedTime);
-      }
-
-      // Update Ranked Teams Slicer (adaptive to Date + Kickoff Time)
-      if (startLevel <= 2) {
-        const currentRanked = DOM.rankedFilter.value;
-        updateRankedSlicer(subset, currentRanked);
-      }
-
-      // Filter subset by selected Ranked Status
-      const selectedRanked = DOM.rankedFilter.value;
-      if (selectedRanked && selectedRanked === "Y") {
-        subset = subset.filter(d => d.Top_25 === "Y");
-      }
-
-      // Update Conference Slicer (adaptive to Date + Time + Ranked)
-      const allConfCheckbox = document.getElementById("conf_all");
-      const wasAllConfChecked = allConfCheckbox ? allConfCheckbox.checked : true;
-
-      let checkedConferences = [];
-      if (!wasAllConfChecked) {
-        checkedConferences = Array.from(
-          document.querySelectorAll("#conferenceFilter .conf-checkbox:checked")
-        ).map(cb => cb.value);
-      }
-
-      updateConferenceSlicer(subset, checkedConferences);
-
-      // Filter subset by selected Conferences
-      const activeConfBoxes = Array.from(
-        document.querySelectorAll("#conferenceFilter .conf-checkbox:checked")
-      ).map(cb => cb.value);
-
-      if (activeConfBoxes.length > 0) {
-        subset = subset.filter(d => 
-          activeConfBoxes.includes(d.Visitor_Conference) || activeConfBoxes.includes(d.Home_Conference)
-        );
-      }
-
-      // Update Media Provider Slicer (adaptive to Date + Time + Ranked + Conference)
-      const allNetCheckbox = document.getElementById("net_all");
-      const wasAllNetChecked = allNetCheckbox ? allNetCheckbox.checked : true;
-
-      let checkedNetworks = [];
-      if (!wasAllNetChecked) {
-        checkedNetworks = Array.from(
-          document.querySelectorAll("#networkFilter .network-checkbox:checked")
-        ).map(cb => cb.value);
-      }
-
-      updateNetworkSlicer(subset, checkedNetworks);
-    }
-
-    // Rebuild Kickoff Time dropdown dynamically based on available games
-    function updateTimeSlicer(filteredData, selectedTime) {
-      const uniqueTimes = Array.from(new Set(filteredData.map(d => d.Start_Time)))
-        .filter(Boolean)
-        .sort((a, b) => timeToMinutes(a) - timeToMinutes(b));
-
-      DOM.timeFilter.innerHTML = '<option value="All">All Times</option>';
-
-      uniqueTimes.forEach(time => {
-        const opt = document.createElement("option");
-        opt.value = time;
-        opt.textContent = time;
-        DOM.timeFilter.appendChild(opt);
-      });
-
-      DOM.timeFilter.value = (selectedTime && (uniqueTimes.includes(selectedTime) || selectedTime === "All"))
-        ? selectedTime 
-        : "All";
-    }
-
-    // Update Ranked Matches dropdown based on filtered availability
-    function updateRankedSlicer(filteredData, selectedRanked) {
-      DOM.rankedFilter.innerHTML = `
-        <option value="All">All Games</option>
-        <option value="Y">AP Top 25</option>
-      `;
-
-      DOM.rankedFilter.value = (selectedRanked === "Y" || selectedRanked === "All") 
-        ? selectedRanked 
-        : "All";
-    }
-
-// Dynamically construct individual conference checkboxes sorted by preferred priority
-// Defaults to "All Conferences" checked on initial load
-function updateConferenceSlicer(filteredData, selectedConferences = []) {
-  // Aggregate conferences from both Visitor_Conference and Home_Conference
-  const extractedConfs = new Set();
-  filteredData.forEach(d => {
-    if (d.Visitor_Conference) extractedConfs.add(d.Visitor_Conference.trim());
-    if (d.Home_Conference) extractedConfs.add(d.Home_Conference.trim());
-  });
-
-  const uniqueConfs = Array.from(extractedConfs).filter(Boolean);
-
-  // Separate into preferred order and remaining alphabetical order
-  const priorityConfs = PREFERRED_CONF_ORDER.filter(conf => uniqueConfs.includes(conf));
-  const remainingConfs = uniqueConfs
-    .filter(conf => !PREFERRED_CONF_ORDER.includes(conf))
-    .sort((a, b) => a.localeCompare(b));
-
-  const orderedConfs = [...priorityConfs, ...remainingConfs];
-
-  DOM.conferenceFilter.innerHTML = "";
-
-  // DEFAULT TO TRUE: If no explicitly passed list, default to selecting all
-  const hasSelectionPassed = Array.isArray(selectedConferences) && selectedConferences.length > 0;
-  const isAllChecked = !hasSelectionPassed || orderedConfs.every(conf => selectedConferences.includes(conf));
-
-  // Master Toggle Element
-  const allDiv = document.createElement("div");
-  allDiv.className = "form-check border-bottom pb-1 mb-2";
-  allDiv.innerHTML = `
-    <input class="form-check-input" type="checkbox" id="conf_all" ${isAllChecked ? 'checked' : ''}>
-    <label class="form-check-label fw-bold" for="conf_all">All Conferences</label>
-  `;
-  DOM.conferenceFilter.appendChild(allDiv);
-
-  // Individual Checkbox Nodes
-  orderedConfs.forEach((conf, idx) => {
-    const isChecked = isAllChecked || selectedConferences.includes(conf);
-    const div = document.createElement("div");
-    div.className = "form-check";
-    div.innerHTML = `
-      <input class="form-check-input conf-checkbox" type="checkbox" value="${conf}" id="conf_${idx}" ${isChecked ? 'checked' : ''}>
-      <label class="form-check-label" for="conf_${idx}">${conf}</label>
-    `;
-    DOM.conferenceFilter.appendChild(div);
-  });
-
-  // Event Listener Setup
-  const allCheckbox = document.getElementById("conf_all");
-  const itemCheckboxes = DOM.conferenceFilter.querySelectorAll(".conf-checkbox");
-
-  allCheckbox.addEventListener("change", (e) => {
-    itemCheckboxes.forEach(cb => cb.checked = e.target.checked);
-    cascadeFromConference();
-  });
-
-  itemCheckboxes.forEach(cb => {
-    cb.addEventListener("change", () => {
-      allCheckbox.checked = Array.from(itemCheckboxes).every(item => item.checked);
-      cascadeFromConference();
-    });
-  });
-}
-
-// Helper function to handle cascading downstream from Conference changes without re-rendering Conference control HTML itself
-function cascadeFromConference() {
-  const selectedDate = DOM.dateFilter.value;
-  let subset = window.gameData.filter(d => d.Date === selectedDate);
-
-  const selectedTime = DOM.timeFilter.value;
-  if (selectedTime && selectedTime !== "All") {
-    subset = subset.filter(d => d.Start_Time === selectedTime);
-  }
-
-  const selectedRanked = DOM.rankedFilter.value;
-  if (selectedRanked && selectedRanked === "Y") {
-    subset = subset.filter(d => d.Top_25 === "Y");
-  }
-
-  // Filter subset by active checked conferences
-  const activeConfBoxes = Array.from(
-    document.querySelectorAll("#conferenceFilter .conf-checkbox:checked")
-  ).map(cb => cb.value);
-
-  if (activeConfBoxes.length > 0) {
-    subset = subset.filter(d => 
-      activeConfBoxes.includes(d.Visitor_Conference) || activeConfBoxes.includes(d.Home_Conference)
-    );
-  }
-
-  // Update downstream Media Provider slicer options & render charts
-  const allNetCheckbox = document.getElementById("net_all");
-  const wasAllNetChecked = allNetCheckbox ? allNetCheckbox.checked : true;
-
-  let checkedNetworks = [];
-  if (!wasAllNetChecked) {
-    checkedNetworks = Array.from(
-      document.querySelectorAll("#networkFilter .network-checkbox:checked")
-    ).map(cb => cb.value);
-  }
-
-  updateNetworkSlicer(subset, checkedNetworks);
-  applyFilters();
-}
-
-    //Dynamically construct individual network checkboxes and handle master selection toggling
-    function updateNetworkSlicer(filteredData, selectedNetworks) {
-      const uniqueNetworks = Array.from(new Set(filteredData.map(d => d.TV_Network)))
-        .filter(Boolean)
-        .sort();
-        
-      DOM.networkFilter.innerHTML = "";
-
-      const isAllChecked = selectedNetworks.length === 0 || uniqueNetworks.every(net => selectedNetworks.includes(net));
-
-      // Master Toggle Element
-      const allDiv = document.createElement("div");
-      allDiv.className = "form-check border-bottom pb-1 mb-2";
-      allDiv.innerHTML = `
-        <input class="form-check-input" type="checkbox" id="net_all" ${isAllChecked ? 'checked' : ''}>
-        <label class="form-check-label fw-bold" for="net_all">All Providers</label>
-      `;
-      DOM.networkFilter.appendChild(allDiv);
-
-      // Individual Checkbox Nodes
-      uniqueNetworks.forEach((net, idx) => {
-        const isChecked = isAllChecked || selectedNetworks.includes(net);
-        const div = document.createElement("div");
-        div.className = "form-check";
-        div.innerHTML = `
-          <input class="form-check-input network-checkbox" type="checkbox" value="${net}" id="net_${idx}" ${isChecked ? 'checked' : ''}>
-          <label class="form-check-label" for="net_${idx}">${net}</label>
-        `;
-        DOM.networkFilter.appendChild(div);
-      });
-
-      // Master Checkbox Event Attachment
-      const allCheckbox = document.getElementById("net_all");
-      const itemCheckboxes = DOM.networkFilter.querySelectorAll(".network-checkbox");
-
-      allCheckbox.addEventListener("change", (e) => {
-        itemCheckboxes.forEach(cb => cb.checked = e.target.checked);
-        applyFilters();
-      });
-
-      // Child Checkbox Event Attachment
-      itemCheckboxes.forEach(cb => {
-        cb.addEventListener("change", () => {
-          allCheckbox.checked = Array.from(itemCheckboxes).every(item => item.checked);
-          applyFilters();
-        });
-      });
-    }
-
-    // Evaluate all active control values and execute chart re-rendering
-    function applyFilters() {
-  const selectedDate = DOM.dateFilter.value;
-  const selectedTime = DOM.timeFilter.value;
-  const selectedRanked = DOM.rankedFilter.value;
-
-  const allConfChecked = document.getElementById("conf_all")?.checked;
-  const checkedConferences = Array.from(
-    document.querySelectorAll("#conferenceFilter .conf-checkbox:checked")
-  ).map(cb => cb.value);
-
-  const checkedNetworks = Array.from(
-    document.querySelectorAll("#networkFilter .network-checkbox:checked")
-  ).map(cb => cb.value);
-
-  let filtered = window.gameData.filter(d => d.Date === selectedDate);
-
-  if (selectedTime && selectedTime !== "All") {
-    filtered = filtered.filter(d => d.Start_Time === selectedTime);
-  }
-
-  if (selectedRanked && selectedRanked === "Y") {
-    filtered = filtered.filter(d => d.Top_25 === "Y");
-  }
-
-  // Filter by conference ONLY if "All Conferences" is unchecked and specific ones are selected
-  if (!allConfChecked) {
-    filtered = filtered.filter(d => 
-      checkedConferences.includes(d.Visitor_Conference?.trim()) || 
-      checkedConferences.includes(d.Home_Conference?.trim())
-    );
-  }
-
-  filtered = filtered.filter(d => checkedNetworks.includes(d.TV_Network));
-
-  const primaryData = filtered.filter(d => !DIGITAL_NETWORKS.includes(d.TV_Network));
-  const digitalData = filtered.filter(d => DIGITAL_NETWORKS.includes(d.TV_Network));
-
-  renderChart('barChart', primaryData, false);
-  renderChart('digitalChart', digitalData, true);
-}
-
-    // =========================================================================
-    // UTILITY HELPER FUNCTIONS
-    // =========================================================================
-
-    // Resolve the primary brand hex color for the home team by searching TEAM_COLORS for exact key matches
-    // @param {string} matchup - Full matchup string (e.g., "#1 Ohio State at Penn State (4-0)")
-    // @returns {string} Hex color string or default gray fallback (#D3D3D3)
-    function getHomeTeamColor(matchup) {
-      if (!matchup) return '#D3D3D3';
-
-      // Split text string by " at " or " vs " / " vs. " (case-insensitive) to isolate the home team segment
-      const parts = matchup.split(/\s+(?:at|vs\.?)\s+/i);
-      if (parts.length < 2) return '#D3D3D3';
-
-      const homeTeamRaw = parts[parts.length - 1].trim();
-
-      // Direct exact lookup on the raw home team string
-      if (Object.prototype.hasOwnProperty.call(TEAM_COLORS, homeTeamRaw)) {
-        return TEAM_COLORS[homeTeamRaw];
-      }
-
-      // Strip rank prefixes (e.g. "No. 5", "#12") and parenthetical strings (e.g. "(4-0)", "(OT)")
-      let homeTeamClean = homeTeamRaw
-        .replace(/^(?:No\.\s*\d+|#\d+)\s+/i, '')
-        .replace(/\s*\([^)]*\)/g, '')
-        .trim();
-
-      // Direct exact lookup on the cleaned home team name
-      if (Object.prototype.hasOwnProperty.call(TEAM_COLORS, homeTeamClean)) {
-        return TEAM_COLORS[homeTeamClean];
-      }
-
-      // Default fallback color (light gray) if no exact key matches are found in TEAM_COLORS
-      return '#D3D3D3';
-    }
-
-    // Convert standard AM/PM time strings into absolute minute integers from midnight
-    function timeToMinutes(t) {
-      if (!t) return 0;
-      const [time, ampm] = t.split(' ');
-      let [h, m] = time.split(':').map(Number);
-      if (ampm === 'PM' && h !== 12) h += 12;
-      if (ampm === 'AM' && h === 12) h = 0;
-      return h * 60 + m;
-    }
-
-    // Allocates overlapping games on the same network to stacked sub-rows
-    function resolveOverlapSubRows(games) {
-      games.sort((a, b) => timeToMinutes(a.Start_Time) - timeToMinutes(b.Start_Time));
-
-      const subRowEndTimes = [];
-      const assignedGames = [];
-
-      games.forEach(game => {
-        const start = timeToMinutes(game.Start_Time);
-        const end = timeToMinutes(game.End_Time);
-        const effectiveEnd = end >= start ? end : end + 1440;
-
-        let rowIndex = -1;
-        for (let i = 0; i < subRowEndTimes.length; i++) {
-          if (subRowEndTimes[i] <= start) {
-            rowIndex = i;
-            break;
-          }
-        }
-
-        if (rowIndex === -1) {
-          subRowEndTimes.push(effectiveEnd);
-          rowIndex = subRowEndTimes.length - 1;
-        } else {
-          subRowEndTimes[rowIndex] = effectiveEnd;
-        }
-
-        assignedGames.push({
-          ...game,
-          subRowIndex: rowIndex
-        });
-      });
-
-      return { assignedGames, totalSubRows: subRowEndTimes.length };
-    }
-
-   // =========================================================================
-    // CHART RENDER ENGINE (Plotly.js)
-    // =========================================================================
-
-    function renderChart(targetId, data, isDigital = false) {
-      const container = document.getElementById(targetId);
-
-      // Empty / No Data Fallback
-      if (!data || data.length === 0) {
-        container.style.height = '120px';
-        Plotly.newPlot(targetId, [], {
-          paper_bgcolor: 'rgba(0,0,0,0)',
-          plot_bgcolor: 'rgba(0,0,0,0)',
-          title: {
-            text: isDigital ? 'No streaming games matching selections.' : 'No network games matching selections.',
-            font: { size: 16, color: '#f3e5ab', family: 'Segoe UI, Arial, sans-serif' }
-          },
-          xaxis: { visible: false },
-          yaxis: { visible: false },
-          showlegend: false
-        }, { responsive: true, displayModeBar: false });
-        return;
-      }
-
-      const grouped = d3.group(data, d => d.TV_Network);
-      const traces = [];
-      const yTicks = [];
-      const yTickLabels = [];
-
-      // Helper to bold ranked teams (e.g., "#19 Washington" or "#12 Alabama")
-function formatMatchupText(text) {
-  if (!text) return '';
-  // Replaces "#12 Team Name" with "<b>#12 Team Name</b>"
-  return text.replace(/(#\d+\s+[\w\s.&'-]+?)(?=\s+at|\s+vs|$)/gi, '<b>$1</b>');
-}
-
-      grouped.forEach((games, network) => {
-        const { assignedGames, totalSubRows } = resolveOverlapSubRows(games);
-
-        for (let i = 0; i < totalSubRows; i++) {
-          const rowKey = `${network}_row_${i}`;
-          yTicks.push(rowKey);
-          yTickLabels.push(network);
-        }
-
-        assignedGames.forEach(game => {
-          const start = timeToMinutes(game.Start_Time);
-          const end = timeToMinutes(game.End_Time);
-          const duration = end >= start ? (end - start) : (end + 1440 - start);
-          const teamHexColor = getHomeTeamColor(game.Matchup);
-          const internalRowKey = `${network}_row_${game.subRowIndex}`;
-          const formattedLabel = formatMatchupText(game.Matchup);
-
-          traces.push({
-            type: 'bar',
-            orientation: 'h',
-            y: [internalRowKey],
-            x: [duration],
-            base: [start],
-            name: game.Matchup,
-            marker: { 
-              color: teamHexColor,
-              line: { color: '#d4af37', width: 1.5 },
-              cornerradius: "45%"
-            },
-            text: [formattedLabel],
-            textposition: 'inside',
-            insidetextanchor: 'middle',
-            insidetextfont: { 
-              family: 'Segoe UI, Arial, sans-serif',
-              color: '#ffffff'
-            },
-            hovertemplate:
-              '<b>%{text}</b><br>' +
-              'Network: ' + network + '<br>' +
-              'Kickoff: %{customdata[0]}<br>' +
-              'End: %{customdata[1]}<extra></extra>',
-            customdata: [[game.Start_Time, game.End_Time]]
-          });
-        });
-      });
-
-      // Strict Row Height Math
-      const ROW_HEIGHT = 30; // Exact target height per bar/row
-      const TOP_AXIS_PADDING = 80; // Buffer space for top time axis and margins
-      const totalRows = yTicks.length;
-      
-      // Explicit plot height
-      const calculatedPlotHeight = (totalRows * ROW_HEIGHT) + TOP_AXIS_PADDING;
-
-      // Set height directly on DOM element
-      container.style.height = `${calculatedPlotHeight}px`;
-
-      const layout = {
-        height: calculatedPlotHeight,
-        paper_bgcolor: 'rgba(0,0,0,0)',
-        plot_bgcolor: 'rgba(0,0,0,0)',
-        barmode: 'stack',
-        bargap: 0.15,                 
-        autosize: true,
-        margin: {
-          l: 100,
-          r: 20,
-          t: 60,
-          b: 10
-        },
-        dragmode: false,
-        xaxis: {
-          fixedrange: true,
-          side: 'top',
-          type: 'linear',
-          range: [660, 1500],
-          tickmode: 'array',
-          tickvals: SHARED_X_AXIS_VALS,
-          ticktext: SHARED_X_AXIS_TEXT,
-          tickangle: -30,
-          tickfont: { family: 'Segoe UI, Arial, sans-serif', size: 10, color: '#f3e5ab' },
-          ticks: 'outside',
-          ticklen: 10,
-          tickcolor: 'rgba(0,0,0,0)',
-          showgrid: true,
-          gridcolor: 'rgba(212, 175, 55, 0.15)',
-          autorange: false,
-          automargin: false
-        },
-        yaxis: {
-          fixedrange: true,
-          ticksuffix: '   ',
-          autorange: 'reversed',
-          ticks: 'outside',
-          ticklen: 8,
-          tickcolor: 'rgba(0,0,0,0)',
-          tickmode: 'array',
-          tickvals: yTicks,
-          ticktext: yTickLabels,
-          tickfont: { family: 'Segoe UI, Arial, sans-serif', color: '#f3e5ab' },
-          automargin: true
-        },
-        showlegend: false
-      };
-
-      const config = { responsive: true, displayModeBar: false };
-
-      Plotly.newPlot(targetId, traces, layout, config);
-    }
-
-    // Properly debounced window resize handler for Plotly recalculations
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        const plotlyContainers = document.querySelectorAll('.plotly-chart');
-        plotlyContainers.forEach(container => {
-          if (window.Plotly && container.clientHeight > 0) {
-            Plotly.Plots.resize(container);
-          }
-        });
-      }, 100);
-    });;;
-  </script>
+    <div class="job">
+        <h3>Wells Fargo — Minneapolis, Minnesota</h3>
+        <p class="role">Business Execution Consultant III (Contract, 2021–2022)<br>
+        <i>Contracted to support enterprise-level operational risk mitigation initiatives through automation and analytical reporting across business lines.</i></p>
+        <ul>
+            <li>Developed automated Excel workbooks using VBA macros to monitor risk‑based QA programs, reducing workflow execution times by 75% with faster and more accurate processing.</li>
+            <li>Scripted advanced SQL queries to analyze upstream data movement and transformation risk‑controls, ensuring the integrity of customer deposit account data reported to Early Warning Services (EWS).</li>
+            <li>Analyzed data control weaknesses with business and tech teams, and delivered targeted mitigation recommendations that addressed root causes of data quality issues.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <h3>Ameriprise Financial — Edina, Minnesota</h3>
+        <p class="role">Paraplanner (2013-2014, 2019–2020)<br>
+        <i>Supported financial advisors with planning, trade execution, and client portfolio management for high-net-worth clients.</i></p>
+        <ul>
+            <li>Developed robust product and portfolio solutions, and modeled multiple planning and investment scenarios using Monte Carlo simulation proposals to secure ongoing and additional business opportunities.</li>
+            <li>Executed and tracked securities trades/transactions, money movement, and account transfers using Thomson One trading platform to ensure business flow, client satisfaction, and regulatory risk mitigation.</li>
+            <li>Identified practice‑management inefficiencies through CRM data analysis, and streamlined service models and operational procedures improving team effectiveness and enhancing role‑specific value.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <h3>Bank of America Merrill Lynch — Palm Desert, California</h3>
+        <p class="role">AVP, Financial Solutions Advisor (2016–2018)<br>
+        <i>Acted as a licensed advisor managing client portfolios and cross-selling banking and investment solutions to affluent clientele.</i></p>
+        <ul>
+            <li>Developed personalized short‑ and long‑term financial plans using diversified brokerage and banking products, recommending strategies aligned with client goals while mitigating risk through disciplined daily compliance.</li>
+            <li>Surpassed sales targets at an average of 155%, driving branch production and strengthening client retention.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Additional Relevant Experience</h2>
+
+    <div class="job">
+        <h3>The Kocen Financial Group, Inc. — Rancho Mirage, California</h3>
+        <p class="role">Manager of Advisory Services & Compliance<br>
+        <i>Directed firm operations and compliance for both RIA and broker-dealer functions, overseeing client portfolio reporting, regulatory adherence, and firm branding.</i></p>
+        <ul>
+            <li>Created ad-hoc reports detailing cash flow estimates, performance analysis, and asset allocation analysis resulting in greater long-term portfolio returns.</li>
+            <li>Oversaw rebranding initiative to modernize client communications and professionalize digital presence.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <h3>Fortune Financial LLC — Minnetonka, Minnesota</h3>
+        <p class="role">Investment Associate<br>
+        <i>Provided strategic oversight of investment research and portfolio evaluation, guiding the firm’s approach to risk‑adjusted performance through disciplined analysis and monthly committee engagement.</i></p>
+        <ul>
+            <li>Conducted investment due diligence and analyzed potential adjustments to model portfolios; presented analysis each month to company investment committee resulting in higher risk-adjusted investment portfolio performance.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <h3>Bank of America Merrill Lynch — Saint Paul, Minnesota</h3>
+        <p class="role">Wealth Management Financial Advisor<br>
+        <i>Delivered tailored financial solutions by building a high‑quality book of business, prioritizing client acquisition and needs‑based recommendations, leveraging specialists, and managing a disciplined, compliant, and productive practice.</i></p>
+        <ul>
+            <li>Recommended suitable investment products, banking solutions, and long-term financial strategies through regular communication touches to retain 100% of clients and assets.</li>
+            <li>Invited to 2011 National Excellence Program.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>
+            <a href="dashboardPreview.jpg" target="_blank">Power BI Dashboard: Wirehouse Wealth & Investment Management Company (Coming Soon as of Aug 2026)
+            </a>
+        </h3>
+        <p><i>Designed a multi-page interactive dashboard using synthetic datasets, complete with full table schema and semantic model.</i></p>
+    </div>
+    
+    <div class="project">
+        <h3>
+            <a href="https://github.com/matthewkilleen0830/COVID-Mask-Scores" target="_blank" rel="noopener noreferrer">
+                Linear Regression: COVID Mask Scores
+            </a>
+        </h3>
+        <p><i>Analyzed the correlation between self-reported mask wearing behavior and COVID-19 cases by county as of mid 2020.</i></p>
+    </div>
+
+    <div class="project">
+        <h3>
+            <a href="https://github.com/matthewkilleen0830/ETL-Streaming-Video" target="_blank" rel="noopener noreferrer">
+                Extract, Transform, and Load (ETL): Video Streaming Services
+            </a>
+        </h3>
+        <p><i>Built a unified dataset and SQL schema from multiple video streaming service datasets.</i></p>
+    </div>
+
+    <div class="project">
+        <h3>
+            <a href="https://github.com/matthewkilleen0830/Greenhouse-Gas-Emissions" target="_blank" rel="noopener noreferrer">
+                Machine Learning: Carbon Emissions Predictor
+            </a>
+        </h3>
+        <p><i>Developed and trained Machine Learning regression models to forecast transportation emissions through 2050.</i></p>
+    </div>
+</section>
+
+<section>
+    <h2>Education</h2>
+
+    <div class="education-item">
+        <p><strong>Bachelor of Arts in Economics</strong><br><a href="https://www.osu.edu">The Ohio State University</a></p>
+    </div>
+
+    <div class="education-item">
+        <p><strong>Associate of Arts in Liberal Arts & Sciences</strong><br><a href="https://www.mnsu.edu">Minnesota State University</a><br><i>Member of NCAA Men's Varsity Golf Team</i></p>
+    </div>
+</section>
+
+<section>
+    <h2>Professional Development</h2>
+    <p>Certificate in Data Analytics and Visualization, <a href="https://www.umn.edu">University of Minnesota</a></p>
+</section>
+
+<footer>
+    <p>© 2026 Matthew Killeen</p>
+    <img src="icon.png" class="tiny-icon">
+</footer>
+
+<script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+    imageMapResize();
+</script>
+    
 </body>
 </html>
