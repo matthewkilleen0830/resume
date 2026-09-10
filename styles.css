@@ -1,221 +1,136 @@
-/* ==========================================================================
-   CFPtheme1 - High-Gloss Metallic Gold & Dark Theme
-   ========================================================================== */
-
-/* Global Reset and Base Layout */
-html, body {
-  height: 100%;
-  margin: 0;
-  background: radial-gradient(circle at 50% 20%, #1c1a17 0%, #0a0a09 70%, #000000 100%);
-  background-attachment: fixed;
-  color: #f0f0f0;
-  font-family: 'Arial Bold', 'Helvetica Neue Bold', Arial, Helvetica, sans-serif !important;
-  font-weight: 450 !important;
-}
-
-/* Header Banner Styling - Scaled and Padded to match grid alignment */
 .top-banner {
-  width: 100%;
-  padding-left: 0.5rem;  /* Matches lower column outer padding */
-  padding-right: 0.5rem; /* Matches lower column outer padding */
-  padding-bottom: 1.25rem;
-  box-sizing: border-box;
-  overflow: hidden;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .top-banner img {
-  width: 100%;
-  height: auto;          /* Scaled proportionally */
-  display: block;        /* Prevents inline gaps underneath image */
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Ensure parent wrapper enforces strict flexbox alignment */
-.main-wrapper {
-  min-height: 100vh;
+@media (max-width: 900px) {
+    .top-banner img {
+        padding: 0 20px;
+    }
 }
 
-.main-wrapper > .row {
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
+
+
+body {
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #2f2f2f;
+    line-height: 1.55;
 }
 
-/* Bootstrap Column Overrides to strictly enforce 20vw / calc(100% - 20vw) */
-.main-wrapper > .row > .col-md-2 {
-  flex: 0 0 22vw !important;
-  max-width: 22vw !important;
-  width: 22vw !important;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-.charts-column {
-  flex: 0 0 calc(100% - 22vw) !important;
-  max-width: calc(100% - 22vw) !important;
-  width: calc(100% - 22vw) !important;
-  min-width: 0 !important; /* CRITICAL: Allows nested Plotly SVG to shrink/grow within flex bounds */
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+section p {
+    margin-top: 0;
 }
 
-/* Shared Gold Metallic Border & Dark Panel Base Style */
-.filter-panel, 
-.chart-container {
-  border-radius: 14px;
-  border: 3px solid transparent;
-  background: 
-    linear-gradient(#161512, #0b0a09) padding-box, 
-    linear-gradient(135deg, #fff3a8 0%, #d4af37 25%, #aa7c11 50%, #f3e5ab 75%, #8a6d1b 100%) border-box;
-  box-shadow: 
-    0 0 18px rgba(212, 175, 55, 0.35),
-    inset 0 1px 2px rgba(255, 243, 168, 0.4),
-    0 10px 30px rgba(0, 0, 0, 0.95);
-  letter-spacing: -0.05em !important;
+h2 {
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
 }
 
-/* Sidebar Control Panel */
-.filter-panel {
-  padding: 1.25rem;
-  padding-right: 0.75rem;
-  position: sticky;
-  top: 1rem;
-  z-index: 100;
-  height: fit-content;
-  max-height: calc(100vh - 2rem);
-  width: 100%;
-  overflow-y: auto;
-  box-sizing: border-box;
+ul {
+    padding-left: 20px;
 }
 
-/* Shiny Metallic Gold Headings */
-.filter-panel h1, 
-.filter-panel h2, 
-.filter-panel h3, 
-.filter-panel h4, 
-.filter-panel h5,
-.chart-container h1,
-.chart-container h2,
-.chart-container h3,
-.chart-container h4,
-.chart-container .chart-title {
-  background: linear-gradient(180deg, #fff7c2 0%, #d4af37 60%, #997a15 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  display: inline-block;
+ul li {
+    margin-bottom: 6px;
 }
 
-/* Slicer option labels */
-.filter-panel label {
-  background: linear-gradient(180deg, #fff7c2 0%, #d4af37 60%, #997a15 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-  display: inline-block;
+
+
+.job {
+    margin-bottom: 28px;
 }
 
-/* Inputs, Select Dropdowns, and Checkboxes in Sidebar */
-.filter-panel .form-control,
-.filter-panel .form-select {
-  background-color: #0f0f0e;
-  color: #ffffff;
-  border: 2px solid #b89228;
-  border-radius: 6px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8);
+.job h3 {
+    margin: 0 0 1px 0;
+    font-size: 1.15rem;
+    font-weight: 600;
 }
 
-.filter-panel .form-control:focus,
-.filter-panel .form-select:focus {
-  background-color: #171614;
-  color: #ffffff;
-  border-color: #ffe680;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+.role {
+    margin: 0 0 9px 0;
+    font-weight: 500;
+    font-size: 1.02rem;
+    color: #555;
 }
 
-/* Scrollable Checkbox Panel Styling */
-.checkbox-panel {
-  max-height: auto;
-  overflow-y: auto;
-  background-color: #0d0c0b;
-  border: 2px solid #a6811e;
-  border-radius: 0.375rem;
-  padding: 0.5rem 0.75rem;
-  color: #f0f0f0;
+.job ul {
+    margin: 0;
+    padding-left: 20px;
 }
 
-.checkbox-panel .form-check {
-  margin-bottom: 0.25rem;
+.job ul li {
+    margin-bottom: 8px;
+    line-height: 1.15;
 }
 
-.checkbox-panel .form-check:last-child {
-  margin-bottom: 0;
+
+
+.project {
+    margin-bottom: 25px;
 }
 
-/* Custom Gold Styling for Checkboxes */
-.checkbox-panel .form-check-input {
-  background-color: #000000;
-  border: 1.5px solid #d4af37;
+.project h3 {
+    margin: 0 0 2px 0;
 }
 
-.checkbox-panel .form-check-input:checked {
-  background-color: #ffd700;
-  border-color: #fff3a8;
-  box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+.project p {
+    margin-top: 0;
 }
 
-/* Custom Shiny Gold Scrollbars */
-.filter-panel::-webkit-scrollbar,
-.checkbox-panel::-webkit-scrollbar {
-  width: 6px;
+
+
+a {
+    color: #2a6ebb;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.filter-panel::-webkit-scrollbar-track {
-  background: transparent;
-  margin-top: 12px; 
-  margin-bottom: 12px;
+a:hover {
+    text-decoration: underline;
 }
 
-.filter-panel::-webkit-scrollbar-track,
-.checkbox-panel::-webkit-scrollbar-track {
-  background: #080808;
-}
-.filter-panel::-webkit-scrollbar-thumb,
-.checkbox-panel::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #f3e5ab 0%, #a6811e 100%);
-  border-radius: 3px;
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    color: #777;
+    margin-top: 40px;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
-/* Base Chart Card Containers */
-.chart-container {
-  padding: 1rem 1rem 0.5rem 1rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  width: 100% !important;
-  margin-right: 0 !important;
-  box-sizing: border-box;
-}
-
-/* Plotly Canvas setup */
-.plotly-chart {
-  width: 100% !important;
-  min-width: 0 !important;
-}
-
-/* Style Plotly text SVG nodes inside chart containers */
-.chart-container text {
-  font-family: 'Segoe UI', Tahoma, sans-serif !important;
-  fill: #f3e5ab !important;
-}
-
-.chart-container .gtitle,
-.chart-container .g-title {
-  fill: #f3e5ab !important;
-  font-weight: 600 !important;
+.tiny-icon {
+    width: 72px;
+    height: 72px;
 }
