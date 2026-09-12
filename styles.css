@@ -1,3 +1,56 @@
+/* ==========================================================================
+   1. GLOBAL / BASE STYLES
+   ========================================================================== */
+
+body {
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #2f2f2f;
+    line-height: 1.55;
+}
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 6px;
+}
+
+a {
+    color: #2a6ebb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   2. HEADER & BANNER
+   ========================================================================== */
+
 .top-banner {
     text-align: center;
     padding: 20px 0;
@@ -20,46 +73,9 @@
 }
 
 
-
-body {
-    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f7f7f7;
-    color: #2f2f2f;
-    line-height: 1.55;
-}
-
-section {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-section p {
-    margin-top: 0;
-}
-
-h2 {
-    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 6px;
-}
-
-
+/* ==========================================================================
+   3. PROFESSIONAL EXPERIENCE
+   ========================================================================== */
 
 .job {
     margin-bottom: 28px;
@@ -79,10 +95,10 @@ ul li {
 }
 
 .role i {
-    font-size: 0.9rem;       /* Matches bullet point font size */
+    font-size: 0.9rem;      /* Matches bullet point font size */
     font-weight: 400;
-    line-height: 1.25;     /* Tightens line spacing */
-    display: inline-block; /* Ensures line-height applies cleanly across wrapped lines */
+    line-height: 1.25;    /* Tightened line spacing */
+    display: inline-block;/* Ensures line-height applies cleanly across wrapped lines */
     margin-top: 2px;
 }
 
@@ -97,6 +113,9 @@ ul li {
 }
 
 
+/* ==========================================================================
+   4. PROJECTS & OTHER SECTIONS
+   ========================================================================== */
 
 .project {
     margin-bottom: 25px;
@@ -111,25 +130,15 @@ ul li {
 }
 
 
-
-a {
-    color: #2a6ebb;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
-
     text-align: center;
     padding: 20px;
     background: transparent;
@@ -138,7 +147,11 @@ footer {
     font-family: Georgia, 'Times New Roman', serif;
 }
 
+footer p {
+    margin: 0;
+}
+
 .tiny-icon {
-    width: 72px;
-    height: 72px;
+    width: 36px;
+    height: 36px;
 }
